@@ -55,7 +55,7 @@ services:
 
   alertmanager:
     container_name: alertmanager-grafana
-    image: prom/alertmanager
+    image: prom/alertmanager:v0.27.0
     ports:
       - 5129:9093
     volumes:
@@ -69,7 +69,7 @@ services:
 
   grafana:
     container_name: grafana
-    image: grafana/grafana
+    image: grafana/grafana:10.4.2-ubuntu
     user: "472"
     depends_on:
       - prometheus
